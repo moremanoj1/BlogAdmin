@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = ViewBag.ShowPostbyUrl.Heading;
+}
+<link href="~/AllCss/AdminStyles/FullPostStyleSheet.css" rel="stylesheet" />
+@model BlogPost.Models.ControlPanelModel.BlogPosts;
+
+<header>
+    <h1>@ViewBag.ShowPostbyUrl.Heading</h1>
+</header>
+
+<article>
+    <p><strong>Author:</strong> @ViewBag.ShowPostbyUrl.Auther</p>
+    <p><strong>Published Date:</strong> @ViewBag.ShowPostbyUrl.PublishDate.ToString("yyyy-MM-dd")</p>
+    <img src="@ViewBag.ShowPostbyUrl.FeaturedImageUrl" alt="Featured Image">
+    <div>@Html.Raw(ViewBag.ShowPostbyUrl.Content)</div>
+</article>
+
+<nav>
+    <a href="@Url.Action("ShowAllPost", "ShowPost")">Back to All Posts</a>
+</nav>

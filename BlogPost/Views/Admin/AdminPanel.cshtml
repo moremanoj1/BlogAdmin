@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Admin Panel";
+}
+<link href="~/AllCss/AdminStyles/AdminPanelStyleSheet.css" rel="stylesheet" />
+<div class="Admin-Pages">
+    <div class="card">
+        <a class="Add-blog" asp-action="AddBlog" asp-controller="Admin">
+            Add Blog
+        </a>
+    </div>
+    <div class="card">
+        <a class="Add-blog" asp-action="ShowAllPost" asp-controller="ShowPost">
+            Show Blog Post
+        </a>
+    </div>
+    <div class="card">
+        <a class="Add-blog" asp-action="BlogDeletebyUrl" asp-controller="ShowPost">
+            Delete Blog Post
+        </a>
+    </div>
+</div>

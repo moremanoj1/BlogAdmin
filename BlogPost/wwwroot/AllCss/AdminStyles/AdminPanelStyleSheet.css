@@ -1,0 +1,29 @@
+﻿
+.Admin-Pages {
+    padding-top: 50px;
+    text-align: center; /* Align cards in the center */
+}
+
+.card {
+    display: inline-block; /* Display cards inline */
+    margin: 10px; /* Add margin between cards for spacing */
+    padding: 10px; /* Add padding inside each card */
+    border: 1px solid #ccc; /* Add border for each card */
+    text-decoration: none; /* Remove default link underline */
+    color: #333; /* Set text color */
+    padding: 90px;
+    background-color: wheat;
+}
+
+/* Style the link inside the card */
+.Add-blog {
+    text-decoration: none; /* Remove default link underline */
+    color: #333; /* Set text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    background-color: #6ea2f5; /* Change background color on hover */
+    border-color: #999; /* Change border color on hover */
+}

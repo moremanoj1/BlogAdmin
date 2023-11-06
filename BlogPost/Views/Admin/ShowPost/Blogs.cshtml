@@ -1,0 +1,28 @@
+﻿@model BlogPost.Models.ControlPanelModel.BlogPosts;
+<div class="Blog-con">
+    <link href="~/AllCss/AdminStyles/BlogsStyleSheet.css" rel="stylesheet" />
+
+    <form method="get" asp-controller="Admin" asp-action="AddBlog">
+        @* @Html.AntiForgeryToken(); *@
+        <button class="btn btn-primary" type="submit">Create New Blog</button>
+    </form>
+
+    <div class="posted-blogs" style="padding-top:30px;">
+        @foreach (var post in ViewBag.ShowAllPost)
+        {
+            <div class="blog-post">
+                <h2>@post.Heading</h2>
+                <p><strong>Published on:</strong> @post.PublishDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                <p><strong>Author:</strong> @post.Auther</p>
+                <div class="content-summary">
+                    <p>@Html.Raw(Html.Encode(post.Content).Substring(0, Math.Min(300, post.Content.Length)) + "...")</p>
+                </div>
+                <div class="full-content" style="display: none;">
+                    <h1>All</h1>
+                </div>
+                <a href="~/ShowPost/BlogShowbyUrl/@post.UrlHandle" class="btn btn-primary">Read More</a>
+                <a href="~/DeleteBlogPost/BlogDeletebyUrl/@post.UrlHandle" class="btn btn-primary">Delete Post</a>
+            </div>
+        }
+    </div>
+</div>

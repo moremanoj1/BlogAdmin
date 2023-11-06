@@ -1,0 +1,12 @@
+﻿.blog-post {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}

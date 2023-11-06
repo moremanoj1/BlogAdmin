@@ -1,0 +1,63 @@
+﻿@model BlogPost.Models.ControlPanelModel.BlogPosts;
+
+@{
+    ViewBag.Title = "Add Blog";
+}
+<link href="~/AllCss/AdminStyles/AddBlogPostStyleSheet.css" rel="stylesheet" />
+
+<form asp-action="AddPost" method="post">
+    <div class="form-group">
+        <label asp-for="Heading"></label>
+        <input asp-for="Heading" class="form-control" />
+        <span asp-validation-for="Heading" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PageTitle"></label>
+        <input asp-for="PageTitle" class="form-control" />
+        <span asp-validation-for="PageTitle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content" class="form-control"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShortDescription"></label>
+        <input asp-for="ShortDescription" class="form-control" />
+        <span asp-validation-for="ShortDescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FeaturedImageUrl"></label>
+        <input asp-for="FeaturedImageUrl" class="form-control"/>
+        <span asp-validation-for="FeaturedImageUrl" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UrlHandle"></label>
+        <input asp-for="UrlHandle" class="form-control" />
+        <span asp-validation-for="UrlHandle" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Auther"></label>
+        <input asp-for="Auther" class="form-control" />
+        <span asp-validation-for="Auther" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Visable"></label>
+        <input asp-for="Visable" type="checkbox" class="form-check-input" />
+    </div>
+    @* Shows Error *@ 
+    @* <div class="form-group">
+        <label>Tags:</label>
+        <select asp-for="Tages" class="form-control" asp-items="@(new SelectList(ViewBag.Tags, "Id", "Name"))"></select>
+    </div> *@
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="ShowAllPost" asp-controller="ShowPost" class="btn btn-primary">Blog</a>
+</form>
+
+
+@* //we will render this Section to layout view *@
+@section script{
+<script>https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js</script>
+<script>https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js</script>
+<script>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js</script>
+}

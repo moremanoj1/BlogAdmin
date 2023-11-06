@@ -1,0 +1,49 @@
+﻿
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style the article content */
+article {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+/* Style author and published date paragraphs */
+article p {
+    margin-bottom: 10px;
+}
+
+/* Style the featured image */
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Style the navigation */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Style navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Change link color on hover */
+nav a:hover {
+    color: #ff9900;
+}
